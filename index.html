@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Status Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Roblox Status Tracker</h1>
+        
+        <div class="user-input">
+            <input type="text" id="user-id" placeholder="Enter Roblox User ID" value="1592079038">
+            <input type="text" id="username" placeholder="Enter Username (Optional)" value="999infinity789 (Saliiii)">
+            <button id="track-btn">Start Tracking</button>
+            <button id="stop-btn" disabled>Stop Tracking</button>
+        </div>
+        
+        <div class="status-container">
+            <div class="status-card">
+                <div class="status-header">
+                    <h2 id="display-username">999infinity789 (Saliiii)</h2>
+                    <span id="status-indicator" class="status-offline">🔴 Offline</span>
+                </div>
+                
+                <div class="status-details">
+                    <p id="game-info">Not currently in any game</p>
+                    <a id="game-link" href="#" target="_blank" style="display: none;">Join Game</a>
+                </div>
+                
+                <div class="last-checked">
+                    <p>Last checked: <span id="last-checked">Never</span></p>
+                </div>
+            </div>
+            
+            <div class="history">
+                <h3>Status History</h3>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

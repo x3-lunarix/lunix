@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0066cc;
+}
+
+.user-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.user-input input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-input button {
+    padding: 10px 15px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-input button:hover {
+    background-color: #0055aa;
+}
+
+.user-input button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.status-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.status-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.status-header h2 {
+    margin: 0;
+    color: #0066cc;
+}
+
+.status-online {
+    color: #00aa00;
+    font-weight: bold;
+}
+
+.status-offline {
+    color: #aa0000;
+    font-weight: bold;
+}
+
+.status-details {
+    margin-bottom: 15px;
+}
+
+#game-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#game-link:hover {
+    text-decoration: underline;
+}
+
+.last-checked {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.history {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.history h3 {
+    margin-top: 0;
+    color: #0066cc;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+.status-time {
+    color: #666;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .user-input {
+        flex-direction: column;
+    }
+    
+    .status-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #status-indicator {
+        margin-top: 5px;
+    }
+}
