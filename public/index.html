@@ -3,42 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Status Tracker</title>
+    <title>999infinity789 Status</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Roblox Status Tracker</h1>
-        
-        <div class="user-input">
-            <input type="text" id="user-id" placeholder="Enter Roblox User ID" value="1592079038">
-            <input type="text" id="username" placeholder="Enter Username (Optional)" value="999infinity789 (Saliiii)">
-            <button id="track-btn">Start Tracking</button>
-            <button id="stop-btn" disabled>Stop Tracking</button>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">999infinity789 Status Monitor</div>
         </div>
         
-        <div class="status-container">
+        <div class="terminal-body">
             <div class="status-card">
-                <div class="status-header">
-                    <h2 id="display-username">999infinity789 (Saliiii)</h2>
-                    <span id="status-indicator" class="status-offline">🔴 Offline</span>
+                <div class="avatar">
+                    <div class="status-indicator offline" id="status-indicator"></div>
                 </div>
-                
-                <div class="status-details">
-                    <p id="game-info">Not currently in any game</p>
-                    <a id="game-link" href="#" target="_blank" style="display: none;">Join Game</a>
-                </div>
-                
-                <div class="last-checked">
-                    <p>Last checked: <span id="last-checked">Never</span></p>
+                <div class="user-info">
+                    <h1>999infinity789 (Saliiii)</h1>
+                    <div class="status-text" id="status-text">Loading status...</div>
                 </div>
             </div>
             
-            <div class="history">
-                <h3>Status History</h3>
-                <ul id="history-list"></ul>
+            <div class="activity-container">
+                <div class="activity-header">
+                    <i class="fas fa-gamepad"></i>
+                    <h2>Current Activity</h2>
+                </div>
+                <div class="activity-content" id="game-info">
+                    <div class="loading-animation">
+                        <div class="dot-flashing"></div>
+                    </div>
+                </div>
             </div>
+            
+            <div class="terminal-history" id="history">
+                <div class="history-header">
+                    <i class="fas fa-history"></i>
+                    <h2>Status History</h2>
+                </div>
+                <div class="history-content" id="history-content"></div>
+            </div>
+        </div>
+        
+        <div class="terminal-footer">
+            <span id="last-updated">Last checked: Never</span>
+            <span class="connection-status"><i class="fas fa-circle"></i> <span id="connection-status">Connecting...</span></span>
         </div>
     </div>
     
