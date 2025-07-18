@@ -6,6 +6,9 @@
     <title>999infinity789 Status</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="terminal-container">
@@ -16,6 +19,9 @@
                 <span class="control maximize"></span>
             </div>
             <div class="terminal-title">999infinity789 Status Monitor</div>
+            <button id="refresh-btn" class="refresh-btn">
+                <i class="fas fa-sync-alt"></i>
+            </button>
         </div>
         
         <div class="terminal-body">
@@ -39,6 +45,9 @@
                         <div class="dot-flashing"></div>
                     </div>
                 </div>
+                <a href="#" id="game-link" class="game-link" target="_blank" style="display: none;">
+                    <i class="fas fa-external-link-alt"></i> Join Game
+                </a>
             </div>
             
             <div class="terminal-history" id="history">
@@ -52,7 +61,9 @@
         
         <div class="terminal-footer">
             <span id="last-updated">Last checked: Never</span>
-            <span class="connection-status"><i class="fas fa-circle"></i> <span id="connection-status">Connecting...</span></span>
+            <span class="connection-status" id="connection-status">
+                <i class="fas fa-circle"></i> Connecting...
+            </span>
         </div>
     </div>
     
